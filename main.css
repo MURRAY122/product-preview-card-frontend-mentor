@@ -1,0 +1,121 @@
+
+:root {
+    /* Colors */
+    --dark_cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very_dark_blue: hsl(212, 21%, 14%);
+    --dark_grayish_blue: hsl(228, 12%, 48%);
+    --white: hsl(0 , 0%, 100%);
+
+    /* Font Sizes */
+    --font_sm: 0.75rem;
+    --font_med: 0.875rem;
+    --font_xlg: 2.25rem;
+
+    /* Font Family */
+    --family_1: 'Montserrat', sans-serif;
+    --family_2: 'Fraunces', serif;
+  }
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cream);
+}
+
+p,h1{
+    margin: 0rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 375px;
+    border-radius: 1rem;
+    font-family: var(--family_1);
+    background-color: var(--white);
+    overflow: hidden; 
+}
+
+.img{
+    content: url(images/image-product-mobile.jpg);
+    width: 375px;
+    background-size: contain;
+}
+
+
+@media screen and (min-width: 1080px) {
+    .container {
+        flex-direction: row;
+        max-width: min-content;
+    }
+
+    .img{
+        content: url(images/image-product-desktop.jpg);
+        height: 475px;
+        background-size: contain;
+    
+    }
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+    font-size: var(--font_med);
+
+}
+.product__tag{
+    color: var(--dark_grayish_blue);
+    letter-spacing: 0.3125rem;
+}
+.product__title{
+    font-family: var(--family_2);
+    font-weight: 700;
+    font-size: var(--font_xlg);
+}
+.product__desc {
+    color: var(--dark_grayish_blue);
+    line-height: 1.5rem;
+    
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+.price__current {
+    font-family: var(--family_2);
+    font-weight: 700;
+    color: var(--dark_cyan);
+    font-size: var(--font_xlg);
+}
+.price__old {
+    text-decoration: line-through;
+    color: var(--dark_grayish_blue);
+}
+
+.btn__cart{
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--dark_cyan);
+    border-radius: .5rem;
+    border-color: transparent;
+    padding: .75rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn__cart:hover {
+    background-color: hsl(158, 36%, 17%);
+  }
+
+button svg{
+    margin-right: .5rem;
+}
