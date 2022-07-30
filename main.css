@@ -17,15 +17,18 @@
     --family_2: 'Fraunces', serif;
   }
 
+html,body{
+    height: 100%;
+    box-sizing: border-box;
+}
+
 body{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
     background-color: var(--cream);
-    align-items: center;
-    min-height: 100vh;
     margin: 1rem;
-    justify-content: center;
 }
 
 p,h1{
@@ -33,29 +36,34 @@ p,h1{
 }
 
 .container{
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     border-radius: 1rem;
     font-family: var(--family_1);
     background-color: var(--white);
-    overflow: hidden;
-    max-width: 719px; 
+    max-width: 660px; 
+}
+.container>picture{
+    display: flex;
+    
 }
 
 img{
     width: 100%;
-    height: auto;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 800px) {
     body{
-        margin: 0;
+        justify-content: center;
     }
     .container {
-        grid-template-columns: max-content 1fr;
+        flex-direction: row;
+        overflow: hidden;
     }
     img{
-        height: 375px;
+        max-width: 304px;
     }
 }
 
@@ -66,7 +74,13 @@ img{
     padding: 1.5rem;
     gap: 1rem;
     font-size: var(--font_med);
+    
 
+}
+@media screen and (min-width: 800px) {
+    .product {
+        max-width: 268px;
+    }
 }
 .product__tag{
     color: var(--dark_grayish_blue);
@@ -79,6 +93,7 @@ img{
 }
 .product__desc {
     color: var(--dark_grayish_blue);
+    font-size: 1rem;
     line-height: 1.5rem;
     
 }
