@@ -64,6 +64,7 @@ img{
     }
     img{
         max-width: 304px;
+        border-top-right-radius: 0rem;
     }
 }
 
@@ -71,6 +72,7 @@ img{
 .product{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     padding: 1.5rem;
     gap: 1rem;
     font-size: var(--font_med);
@@ -99,18 +101,25 @@ img{
 }
 
 .price {
+    margin: 0;
+    padding: 0;
+  }
+.price>li{
     display: flex;
     flex-direction: row;
-    gap: 1rem;
     align-items: center;
-  }
+    gap: 1.5rem;
+}
 .price__current {
+    margin: 0;
     font-family: var(--family_2);
+    font-size: 2.25rem;
     font-weight: 700;
     color: var(--dark_cyan);
-    font-size: var(--font_xlg);
 }
 .price__old {
+    margin-right: 0;
+    font-size: 1.125rem;
     text-decoration: line-through;
     color: var(--dark_grayish_blue);
 }
